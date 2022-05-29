@@ -5,5 +5,7 @@
   "tabWidth": 2,
   "trailingComma": "es5",
   "useTabs": false,
-  "printWidth": 100
+  "printWidth": 100,
+  "jsxBracketSameLine": true,
+  "files.autoSave": "onFocusChange"
 }
