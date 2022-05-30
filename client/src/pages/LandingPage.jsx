@@ -1,5 +1,5 @@
 import React from 'react';
-import PlayGroundList from '../components/PlayGroundList.jsx';
+import PlayGroundList from '../components/PlaygroundList/PlaygroundList.jsx';
 
 function LandingPage({ playgrounds }) {
   return (
