@@ -1,6 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
+
   * {
     box-sizing: border-box;
     margin: 0;
@@ -10,11 +11,14 @@ const GlobalStyle = createGlobalStyle`
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-decoration: none;
   }
+
   html, body {
     height: 100%;
     width: 100%;
 }
+
   body {
     max-width: 768px;
     height: 100vh;
@@ -34,12 +38,24 @@ main {
   overflow-y: auto;
 }
 
+h1{
+  text-align: center;
+}
+
+h1, h2, h3, h4, h5, p, a, li {
+  color: black;
+}
+
 ul {
-  list-style: none;
   padding: 0;
   margin: 0 auto;
 }
 
+li {
+  list-style-type: none;
+}
 `;
+
+
 
 export default GlobalStyle;
