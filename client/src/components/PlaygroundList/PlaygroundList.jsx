@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import styled from 'styled-components';
 
 function PlayGroundList({ playgrounds }) {
   return (
@@ -9,7 +10,7 @@ function PlayGroundList({ playgrounds }) {
             const attributes = playground.attributes;
 
             return (
-              <li key={attributes.objectid}>
+              <PlaygroundItem key={attributes.objectid}>
                 <h2>{attributes.spielplatzname}</h2>
                 <p>
                   {attributes.stadtbezirk === attributes.stadtteil
@@ -24,12 +25,20 @@ function PlayGroundList({ playgrounds }) {
                 {/* <p>{(attributes?.spielplatzpaten === 'x')
                   ? 'Spielplatzpaten: ✅'
                   : 'Spielplatzpaten: ❌'}</p> */}
-              </li>
+              </PlaygroundItem>
             );
           })}
       </ul>
     </>
   );
 }
+
+const PlaygroundItem = styled.li`
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 1em;
+  border-radius: 10px;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+`;
 
 export default PlayGroundList;
