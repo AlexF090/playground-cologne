@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import LandingPage from './pages/LandingPage.jsx';
+import DetailPage from './pages/DetailPage.jsx';
 
 function App() {
   const [playgrounds, setPlaygrounds] = useState([]);
@@ -19,7 +21,10 @@ function App() {
   return (
     <>
       <h1>Spielplätze - Köln</h1>
-      <LandingPage playgrounds={playgrounds} />
+      <Routes>
+        <Route path="/" element={<LandingPage playgrounds={playgrounds} />} />
+        <Route path=":id" element={<DetailPage playgrounds={playgrounds} />} />
+      </Routes>
     </>
   );
 }
