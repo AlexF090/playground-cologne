@@ -8,7 +8,7 @@ function PlayGroundList({ playgrounds }) {
       <ul>
         {playgrounds &&
           playgrounds.map(playground => {
-            const pgAttributes = playground.attributes;
+            const pgAttributes = playground;
 
             return (
               <PlaygroundItem key={pgAttributes.objectid}>
